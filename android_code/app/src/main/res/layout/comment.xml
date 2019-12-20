@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".activity.categories.AddBid">
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.bidme.utils.CustomTextViewBold
+                    android:id="@+id/tvtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="start"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/add_comment"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:padding="10dp"
+                    android:text="Comment"
+                    android:textColor="@color/bg_color"
+
+                    android:textSize="18sp"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:onClick="onClick"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_close_black_24dp"
+
+                    />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_below="@+id/cardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.bidme.utils.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate Rating: "
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <com.willy.ratingbar.ScaleRatingBar
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/simpleRatingBar"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="true"
+                    app:srb_drawableEmpty="@drawable/empty"
+                    app:srb_drawableFilled="@drawable/filled"
+                    app:srb_isIndicator="false"
+                    app:srb_minimumStars="0"
+                    app:srb_numStars="5"
+                    app:srb_scrollable="true"
+                    app:srb_starHeight="20dp"
+                    app:srb_starPadding="5dp"
+                    app:srb_starWidth="20dp"
+                    app:srb_stepSize="0.5"></com.willy.ratingbar.ScaleRatingBar>
+
+            </LinearLayout>
+
+
+            <com.bidme.utils.CustomEditText
+                android:id="@+id/etComment"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_editing_comments"
+
+                android:hint="@string/comment"
+                android:padding="15dp" />
+
+
+
+            <com.bidme.utils.CustomButton
+                android:id="@+id/btnComment"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/button_selector"
+                android:padding="10dp"
+                android:onClick="onClick"
+                android:text="submit"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

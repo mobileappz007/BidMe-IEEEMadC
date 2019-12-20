@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@android:color/widget_edittext_dark"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/iActProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/profileback"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:src="@drawable/ic_back_white"
+
+                    />
+
+                <com.bidme.utils.CustomTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="25dp"
+
+                    android:gravity="center"
+                    android:text="@string/profile"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cardView">
+
+            <LinearLayout
+                android:id="@+id/mainlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@color/off_white"
+
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/civProfile"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/bg_circle"
+
+                            />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/civProfile1"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginTop="80dp"
+                            android:src="@drawable/ic_upload_image" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line1"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_man_user" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            app:hintEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/ctvName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:hint="@string/user_namee"
+                                android:editable="false"
+                                android:focusable="false"
+
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </android.support.design.widget.TextInputLayout>
+                        <!--    <com.samyotech.subasta.utils.CustomEditText
+                                android:id="@+id/ctvName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:editable="true"
+                                android:focusable="true"
+                                android:maxLines="1"
+                                android:maxLength="30"
+                                android:hint="@string/full_name"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />-->
+
+                        <!-- <com.samyotech.subasta.utils.CustomEditText
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="10dp"
+                             android:editable="true"
+                             android:focusable="true"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_email_black_24dp" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            app:hintEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:hint="@string/email"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <!--    <com.samyotech.subasta.utils.CustomEditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:editable="true"
+                                android:focusable="true"
+                                android:maxLength="30"
+                                android:maxLines="1"
+                                android:hint="@string/email"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_phone_black_24dp" />
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/cCodePicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusedByDefault="false"
+                            android:clickable="false"
+
+
+
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="17dp"
+
+
+                            >
+
+
+                        </com.hbb20.CountryCodePicker>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            app:hintEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/cetPhoneno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+
+
+                                android:hint="@string/phone"
+                                android:inputType="number"
+                                android:focusable="false"
+                                android:editable="false"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                        <!-- <com.samyotech.subasta.utils.CustomEditText
+                             android:id="@+id/cetPhoneno"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="10dp"
+                             android:hint="@string/phone"
+                             android:maxLength="10"
+                             android:focusable="true"
+                             android:inputType="number"
+                             android:maxLines="1"
+                             android:textSize="14sp"
+                             android:textStyle="bold" />-->
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_zip" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            app:hintEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/ctZipcode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:hint="@string/zip_Code"
+                                android:maxLines="1"
+                                android:inputType="number"
+
+                                android:singleLine="true"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </android.support.design.widget.TextInputLayout>
+                        <!--    <com.samyotech.subasta.utils.CustomEditText
+                                android:id="@+id/ctvName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:editable="true"
+                                android:focusable="true"
+                                android:maxLines="1"
+                                android:maxLength="30"
+                                android:hint="@string/full_name"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />-->
+
+                        <!-- <com.samyotech.subasta.utils.CustomEditText
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="10dp"
+                             android:editable="true"
+                             android:focusable="true"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />-->
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/town_black" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            app:hintEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/ctTown"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:hint="@string/Town"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </android.support.design.widget.TextInputLayout>
+                        <!--    <com.samyotech.subasta.utils.CustomEditText
+                                android:id="@+id/ctvName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:editable="true"
+                                android:focusable="true"
+                                android:maxLines="1"
+                                android:maxLength="30"
+                                android:hint="@string/full_name"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />-->
+
+                        <!-- <com.samyotech.subasta.utils.CustomEditText
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center"
+                             android:layout_marginLeft="10dp"
+                             android:editable="true"
+                             android:focusable="true"
+                             android:textSize="16sp"
+                             android:textStyle="bold" />-->
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/profile_location" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            app:hintEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/cetAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:clickable="true"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:hint="@string/address"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <!--  <com.samyotech.subasta.utils.CustomEditText
+                              android:id="@+id/cetAddress"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center"
+                              android:layout_marginLeft="10dp"
+                              android:hint="@string/address"
+
+                              android:textSize="14sp"
+                              android:textStyle="bold" />-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            >
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_profil_gender" />
+
+                            <com.bidme.utils.CustomTextViewBold
+                                android:id="@+id/ctvGender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="23dp"
+                                android:focusable="true"
+                                android:maxLines="1"
+                                android:text="@string/gender"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="40dp"
+                            android:editable="true"
+                            android:orientation="horizontal"
+
+
+                            android:padding="10dp"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="90dp"
+                            tools:layout_editor_absoluteY="497dp">
+
+                            <RadioButton
+                                android:id="@+id/male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:editable="true"
+                                android:text="@string/male"
+                                android:textSize="16sp"
+
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:editable="true"
+                                android:text="@string/female"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.bidme.utils.CustomButton
+                    android:id="@+id/btnsubmitdata"
+                    style="@style/Base.CardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_selector"
+                    android:clickable="true"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>

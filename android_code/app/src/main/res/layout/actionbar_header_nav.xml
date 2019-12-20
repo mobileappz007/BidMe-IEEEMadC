@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/headergradient">
+
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/greyripple"
+
+            android:padding="8dp"
+            android:src="@drawable/ic_menu"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_back"
+            android:visibility="gone" />
+
+        <com.bidme.utils.CustomTextViewBold
+            android:id="@+id/tvtitlemain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <com.bidme.utils.CustomTextView
+                android:id="@+id/tvindrapuri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:text="@string/indrcol"
+
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+
+                android:entries="@array/category_arrays"
+                android:prompt="@string/category_prompt"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/ivSearch1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/greyripple"
+
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivFilter"
+
+
+            android:padding="5dp"
+            android:src="@drawable/ic_search"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/greyripple"
+
+            android:padding="5dp"
+            android:src="@drawable/ic_filter"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/ivHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/greyripple"
+
+
+            android:padding="8dp"
+            android:src="@drawable/ic_medical_history"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/svHistoryDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/greyripple"
+
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_search"
+            android:visibility="gone"
+
+            />
+
+
+    </RelativeLayout>
+
+</layout>

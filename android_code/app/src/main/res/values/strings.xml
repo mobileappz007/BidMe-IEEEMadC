@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BidMe</string>
+    <string name="please_wait">Please wait</string>
+    <string name="ok">OK</string>
+    <string name="internet_connection">Please enable your internet connection</string>
+    <string name="cancel">Cancel</string>
+    <string name="location">Location</string>
+    <string name="discovery">Discovery</string>
+    <string name="adveritsements">Adveritsements</string>
+    <string name="auction">Auctions</string>
+    <string name="price">₹400</string>
+    <string name="currentlocation">Bhavarkuya</string>
+    <string name="advertisename">Sonata wall watch</string>
+    <string name="postauction">Post Auction</string>
+    <string name="postads">Post Ads</string>
+    <string name="viewall">View all</string>
+    <string name="minbid">min_bid</string>
+    <string name="aucproductname">HP NoteBook</string>
+    <string name="day_ago">4 days ago</string>
+    <string name="time">4:30</string>
+    <string name="catogory_name">4 days ago</string>
+    <string name="searchhere">Search here....</string>
+    <string name="Can_you_make_it_for_9000_onwords">Can you make it for 9000 onwords?</string>
+
+
+    <string name="mao">Make An option</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="pkgname">Pakage Name -</string>
+
+
+    <string name="openDrawer">open_drawer</string>
+    <string name="Delete">Delete</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_browse">Browse</string>
+    <string name="nav_chats">Chats</string>
+    <string name="nav_myads">My ads</string>
+    <string name="nav_myauction">My Auction</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_logout">Log Out</string>
+    <string name="nav_subscription_history">Subscription</string>
+    <string name="closeMsg">Are your sure you want to close Subasta?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="skip"> <u>Skip</u></string>
+
+    <string name="nav_my_ads">My Ads</string>
+    <string name="nav_my_auctions">My Auctions</string>
+    <string name="nav_subscription">Subscription</string>
+    <string name="support">I did not received the code </string>
+    <string name="SUPPORT">Support</string>
+    <string name="GuestUser">For Guest User?</string>
+    <string name="time1">Today 4 pm</string>
+    <string name="message">Enter your message</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="selling">Selling</string>
+    <string name="buying">Buying</string>
+    <string name="all">All</string>
+    <string name="no_chat_found">No Chat History Found</string>
+    <string name="favourites">Favourites</string>
+    <string name="sold">Sold</string>
+    <string name="no_ads_found">No Ads Found</string>
+    <string name="nothing_search">Nothing searched yet.</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="no_notification">No Notification Here</string>
+    <string name="nopakage">Oops you can not select new pacakge ,your current package is going on....</string>
+    <string name="no_auctions_found">No Auctions Found</string>
+    <string name="currentPkg">Current Subscribed Package</string>
+    <string name="my_auction">My Auction</string>
+    <string name="my_bids">My Bids</string>
+    <string name="won_bids">Won Bids</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="user_name">User Name</string>
+    <string name="user_namee">User Name</string>
+    <string name="valid_user_namee">Please enter user Name</string>
+    <string name="First_Name">First Name</string>
+    <string name="Last_Name">Last Name</string>
+    <string name="zip_Code">Zip Code</string>
+    <string name="Town">Town</string>
+    <string name="email">Email Id</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="password">Password</string>
+    <string name="verifypass">Plese enter Password</string>
+    <string name="val_name">Please enter your name.</string>
+    <string name="val_first_name">Please enter your first name.</string>
+    <string name="val_last_name">Please enter your last name.</string>
+    <string name="val_town">Please enter your town.</string>
+    <string name="val_zip_code">Please enter your zipCode.</string>
+    <string name="val_email">Please enter your email id.</string>
+    <string name="val_mobile">Please enter your mobile no.</string>
+    <string name="val_password">Password must contain at least six characters.</string>
+    <string name="val_confirm_password">Please confirm your password.</string>
+    <string name="confirm_password">Please enter your confirm password.</string>
+    <string name="please_upload">Please upload your picture.</string>
+    <string name="aution_image">Please add auction image.</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="login">Login</string>
+    <string name="agree">I agree with this policy.</string>
+    <string name="guestMsg">"Oops.. sorry you are the guest user,first register and then you are able to place bid and can create your auction."</string>
+    <string name="PrivacyPolicy">Privacy Policy</string>
+    <string name="cookiePolicy">Terms &amp; Condition</string>
+    <string name="FQ">F&amp;Q</string>
+    <string name="or">OR</string>
+    <string name="Winner">Winner</string>
+    <string name="REGISTERNEW">Register</string>
+    <string name="CancelNew">Cancel</string>
+    <string name="Block">Block</string>
+    <string name="Unblock">Unblock</string>
+    <string name="Please_Enter_Description">Please Enter Description</string>
+    <string name="Please_Enter_shortDescription">Please Enter Short Description</string>
+    <string name="Please_Enter_Address">Please Enter Address</string>
+    <string name="Please_Enter_Price">Please Enter Price</string>
+    <string name="Please_Enter_valid_amountt">Please Enter Valid Amount.</string>
+    <string name="Please_start_with_10dkr">Please start with 10 DKR</string>
+    <string name="Please_Select_Start_Date">Please Select Start Date</string>
+    <string name="Please_Select_End_Date">Please Select End Date</string>
+    <string name="Please_selectEndStartDate">Please Select Start and End Date</string>
+    <string name="Please_Enter_the_title">Please Enter the title</string>
+    <string name="login_with_gmail">Login With Gmail</string>
+    <string name="login_with_facebook">Login With Facebook</string>
+    <string name="forgot_password_message">Enter your Email in the from below and we will send you further instructions on how to reset your password.</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="imf">I\'m looking for...</string>
+    <string name="Type_a_message">Type a message</string>
+
+
+    <string name="password_required_validation">Please Enter Current Password.</string>
+    <string name="new_pwd_required_validation">Please Enter New Password.</string>
+    <string name="confirm_pwd_required_validation1">Please Re-Enter New Password.</string>
+    <string name="confirm_pwd_validation1">New Password and Confirm Password doesn\'t match.</string>
+    <string name="enter_pass">Please enter password.</string>
+    <string name="enter_new_pass">Please enter new password.</string>
+    <string name="no_auction_found">No Auction Found</string>
+    <string name="no_advertise_found">No Advertise Found</string>
+    <string name="view_all">View All</string>
+    <string name="auctions">Auctions</string>
+    <string name="advertisements">Advertisements</string>
+    <string name="invite">Join me on Substa, a best platform to buy and sell through creating auction and placing bids</string>
+
+    <string name="discover">Discover</string>
+    <string name="Discount">Discount</string>
+    <string name="confirm_pass">Confirm Password</string>
+    <string name="photos">Photos</string>
+    <string name="allcat">All Categories</string>
+    <string name="indrcol">Indrapuri colony</string>
+    <string name="auction_posted">Auction posted at</string>
+    <string name="post_auctions">Post Auctions</string>
+    <string name="indrapuri">Indrapuri colony,Indore</string>
+    <string name="showingcategories">Showing Categories</string>
+    <string name="ViewMore">View more</string>
+    <string name="place">Place your minimum bid</string>
+
+
+    <string name="dialog_message">Welcome to Alert Dialog</string>
+    <string name="dialog_title">Javatpoint Alert Dialog</string>
+
+
+    <string name="category_prompt">Choose a country</string>
+
+    <string name="category_sub">Choose a Sub Category</string>
+
+
+    <string name="category_sub_brand">Choose a Sub Brands</string>
+
+    <string name="category_sub_model">Choose a Sub Brands</string>
+
+
+    <string name="Skip">Skip</string>
+
+    <string name="login_with_google">Login with Google+</string>
+
+
+    <string name="Or">OR</string>
+
+    <string name="Email_id">Email id</string>
+
+
+    <string name="Password">Password</string>
+
+    <string name="verifyemail">Please enter the valid email</string>
+    <string name="Forget_password">Forgot Password</string>
+    <string name="Email">Email</string>
+    <string name="Ends_in">Ends in-</string>
+    <string name="signup_btn">SIGNUP</string>
+
+    <string name="old_password">Old Password</string>
+    <string name="New_password">New Password</string>
+    <string name="Retype_password">Retype Password</string>
+    <string name="save">SAVE</string>
+    <string name="profile">Profile</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="contact">Contact Details</string>
+    <string name="gender">Gender</string>
+    <string name="phone">Phone</string>
+    <string name="email11">Email</string>
+    <string name="Reset_pass">Reset Password</string>
+    <string name="submit">SUBMIT</string>
+    <string name="PHTL">Price High To Low</string>
+    <string name="PLTH">Price Low To High</string>
+    <string name="NewAriival">New Arrival</string>
+    <string name="Ending_soon">Ending_soon</string>
+    <string name="Aution_validity">Aution validity</string>
+    <string name="EDIT">EDIT</string>
+    <string name="Bid_placed_by_you">Bid placed by you</string>
+    <string name="Actual_Price">Price-</string>
+    <string name="placed_bid_amount">Placed Bid Amount</string>
+    <string name="reset_msg">Enter Your Email in the form below and we will send you further instruction on how to reset your password.</string>
+    <string name="post_aution">Post Aution</string>
+    <string name="address">Address</string>
+    <string name="year_of_registraion">Year Of Registration</string>
+    <string name="addauctionprice">Price *</string>
+    <string name="s_date">Starting Date</string>
+    <string name="edate">End Date</string>
+    <string name="Remove">Remove</string>
+    <string name="nfo">No of Onner</string>
+    <string name="insureddoc">Insured Doc</string>
+    <string name="min_price">Min Price</string>
+    <string name="add_description">Add Description(Max 30 Characters)</string>
+    <string name="short_description">Add Short Description</string>
+    <string name="brand_name">Brand Name *</string>
+    <string name="add_photo">You can add upto 5 photos</string>
+    <string name="additional_details">Additional Details</string>
+    <string name="num_of_owners">Number of Owners</string>
+    <string name="first_select">First photo of your selection will be your cover photo</string>
+    <string name="color">Color</string>
+    <string name="year">Year *</string>
+    <string name="insured">Insured</string>
+    <string name="mileage">Mileage(per litre)</string>
+    <string name="postbid">POST BID</string>
+    <string name="category">Category</string>
+    <string name="post_ads">POST ADS</string>
+    <string name="Additional_optional">Additional Details (Optional)</string>
+    <string name="whatruoffer">WHAT ARE YOU OFFERING</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="somedetails">Post Auction</string>
+    <string name="adtitle">Ad title *</string>
+    <string name="mention">Description</string>
+    <string name="condition">Include condition,features and reason for selling</string>
+    <string name="desc">Describe what you are selling</string>
+    <string name="required">Required Fields *</string>
+    <string name="next">NEXT</string>
+    <string name="Tax">Tax</string>
+    <string name="setting">Settings</string>
+    <string name="account">Account</string>
+    <string name="Next">Next</string>
+    <string name="chat">Chat</string>
+    <string name="support1">Support</string>
+    <string name="notification">Notification</string>
+    <string name="inviteafrnd">Invite a friend</string>
+    <string name="notificationhere">Notification here !!</string>
+    <string name="scrolldown_refresh">Scroll down to refresh</string>
+
+    <string name="changpass">Change Password</string>
+    <string name="plan">Subscription</string>
+    <string name="standard">Standard</string>
+    <string name="upgrade">UPGRADE</string>
+    <string name="offering">What offer for you... ?</string>
+    <string name="fit_image">FIT IMAGE</string>
+    <string name="square">SQUARE</string>
+    <string name="free">FREE</string>
+    <string name="circle">CIRCLE</string>
+    <!--For Image Picker-->
+    <string name="permission_pick_rationale">READ_EXTERNAL_STORAGE permission is needed to pick image.</string>
+    <string name="permission_crop_rationale">WRITE_EXTERNAL_STORAGE permission is needed to save cropped image.</string>
+    <string name="button_allow">Allow</string>
+    <string name="button_deny">Deny</string>
+    <string name="action_camera">Camera</string>
+    <string name="action_gallery">Gallery</string>
+    <string name="total">Total days - </string>
+    <string name="bid">Place Bid</string>
+    <string name="addbid">Add bid</string>
+    <string name="comment">write your comment here....</string>
+
+
+    <string name="curentpkghis">Current Package History</string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+
+    <string name="set_random_progress">set random progress</string>
+    <!--For Image Picker-->
+
+
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="seekbar_tracking_on">Tracking on</string>
+    <string name="seekbar_tracking_off">Tracking off</string>
+
+    <string name="seekbar_from_touch">from touch</string>
+
+
+    <string name="title_google_fragment">Google+</string>
+
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_with_twitter">Sign in with Twitter</string>
+    <string name="sign_in_with_linked_in">Sign in with LinkedIn</string>
+
+
+    <string name="sign_in_with_fb">Sign in with Facebook</string>
+    <string name="share_fb">Facebook Share</string>
+    <string name="facebook_app_id">596028327096505</string>
+    <string name="subscribe">  Want to subscribe ? </string>
+    <string name="valid_bid">please enter valid bid</string>
+    <string name="update_bid">Update bid</string>
+    <string name="title_activity_subscription_all_history">SubscriptionAllHistory</string>
+    <string name="title">Title</string>
+    <string name="add_auction">Add Auction</string>
+    <string name="valid_email_id">Please enter valid email id.</string>
+    <string name="First_login_ur_account">Please First registered your detail.</string>
+    <string name="first_chat">Please First registered your detail for chating.</string>
+    <string-array name="category_arrays">
+        <item>Furnitures</item>
+        <item>Electronics</item>
+        <item>Books</item>
+        <item>Fashion</item>
+        <item>Bikes</item>
+        <item>Cars</item>
+
+    </string-array>
+    <string-array name="sub_category">
+
+        <item>Mobile Acessories</item>
+        <item>Tablet</item>
+        <item>Mobiles</item>
+
+    </string-array>
+    <string-array name="sub_brands">
+
+        <item>Vivo</item>
+        <item>Asus</item>
+        <item>Samsung</item>
+        <item>Oppo</item>
+        <item>Redmi</item>
+        <item>Lenovo</item>
+
+    </string-array>
+    <string-array name="sub_model">
+
+        <item>mi 5a</item>
+        <item>mi 6a</item>
+        <item>mi note 4</item>
+        <item>mi note 5</item>
+        <item>mi 6</item>
+        <item>mi note 5 pro</item>
+
+    </string-array>
+
+</resources>

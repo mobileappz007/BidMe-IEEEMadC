@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        tools:context=".activity.SupportAcitivity">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@android:color/widget_edittext_dark"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/icBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+
+                    android:onClick="onClick"
+                    android:background="@drawable/ic_back"
+                    android:padding="5dp" />
+
+                <com.bidme.utils.CustomTextViewBold
+                    android:id="@+id/tvCategoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textAlignment="center"
+
+                    android:layout_weight="1"
+
+
+                    android:text="Support"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/cardView"
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            android:layout_margin="5dp">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/chatSearch"
+            android:layout_below="@id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripplecard"
+
+            app:defaultQueryHint="@string/searchhere"
+            android:textAlignment="textStart"
+            app:iconifiedByDefault="false"/>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cardView1">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycleview1"
+            android:layout_margin="15dp"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/myFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_white"
+            android:background="@color/bg_color"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            app:elevation="4dp"
+            />
+        <com.bidme.utils.CustomTextViewBold
+
+            android:id="@+id/tvNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:text="@string/no_data_found"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</layout>

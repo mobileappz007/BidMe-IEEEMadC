@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_color">#F05A28</color>
+    <color name="light_color">#FF9F84</color>
+    <color name="grey">#5F595B</color>
+    <color name="colorPrimary">#444444</color>
+    <color name="colorPrimaryDark">#4B4B4B</color>
+    <color name="colorAccent">#FF7F2E</color>
+    <color name="gray">#B4AEAE</color>
+    <color name="gray1">#C4BBBB</color>
+    <color name="gray_light">#FAFAFA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="facebook">#3B5998</color>
+    <color name="red">#ff3647</color>
+    <color name="off_white">#f4ecec</color>
+    <color name="btn_bg">#ee5928</color>
+    <color name="chatcolor">#C1C1D6</color>
+    <color name="lightpink">#D5B6DA</color>
+    <color name="lightgreen">#EB9B87</color>
+    <color name="google">#DD4E3D</color>
+    <color name="icon_color">#888484</color>
+    <color name="text_bg">#ee5928</color>
+    <color name="tab_line">#ee5928</color>
+    <color name="topColor">#424242</color>
+
+    <color name="lightcolor">#EC8F08</color>
+    <color name="navigation_header">#494949</color>
+    <color name="drawer">#424242</color>
+    <color name="yellow">#CDC000</color>
+    <color name="black_semi_transparent">#B2000000</color>
+
+
+    <color name="colorInfok">#29B6F6</color>
+    <color name="colorSuccessk">#66BB6A</color>
+    <color name="colorWarningk">#FFA726</color>
+    <color name="colorErrork">#EF5350</color>
+<!--Kavita mam Color-->
+    <color name="colorPrimaryk">#888484</color>
+    <color name="colorPrimaryDarkk">#888484</color>
+    <color name="colorAccentk">#D81B60</color>
+
+
+    <color name="colorInfo">#29B6F6</color>
+    <color name="blue">#0134EB</color>
+    <color name="blueDark">#5F6EA5</color>
+    <color name="colorSuccess">#66BB6A</color>
+    <color name="colorWarning">#FFA726</color>
+    <color name="colorError">#EF5350</color>
+    <color name="txt_bg">#ff5335</color>
+    <color name="green">#80CA2F</color>
+    <color name="new_color">#AB0A0A0A</color>
+    <!--For Image Picker-->
+
+
+    <color name="windowBackground">#1C1C1C</color>
+    <color name="overlay">#AA1C1C1C</color>
+    <color name="divider">#333333</color>
+    <!--For Image Picker-->
+</resources>

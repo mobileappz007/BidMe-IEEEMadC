@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/viewcontact"
+        android:title="View contact" />
+    <item android:id="@+id/media"
+        android:title="Media" />
+    <item android:id="@+id/search1"
+        android:title="Search" />
+    <item android:id="@+id/mutenotifiction"
+        android:title="Mute notifications" />
+    <item android:id="@+id/wallpaper"
+        android:title="wallpaper" />
+    <item android:id="@+id/clearChat"
+        android:title="Clear chat" />
+</menu>

@@ -1,0 +1,12 @@
+drwxr-xr-x    5 1693598    themedesig         12 Mar 10 04:02 .
+drwxr-xr-x    6 1693598    themedesig          6 Mar 10 04:01 ..
+drwxr-xr-x    2 1693598    themedesig         14 Mar 10 04:02 icon-classes
+drwxr-xr-x    2 1693598    themedesig         11 Mar 10 04:02 icon-variables
+drwxr-xr-x    2 1693598    themedesig          6 Mar 10 04:02 mappings
+-rwxr-xr-x    1 1693598    themedesig        398 Mar 10 04:01 weather-icons-classes.scss
+-rwxr-xr-x    1 1693598    themedesig       2007 Mar 10 04:01 weather-icons-core.scss
+-rwxr-xr-x    1 1693598    themedesig        381 Mar 10 04:01 weather-icons-variables.scss
+-rwxr-xr-x    1 1693598    themedesig        228 Mar 10 04:01 weather-icons-wind.min.scss
+-rwxr-xr-x    1 1693598    themedesig        228 Mar 10 04:01 weather-icons-wind.scss
+-rwxr-xr-x    1 1693598    themedesig       1146 Mar 10 04:01 weather-icons.min.scss
+-rwxr-xr-x    1 1693598    themedesig       1146 Mar 10 04:01 weather-icons.scss

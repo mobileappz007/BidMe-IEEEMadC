@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        tools:context=".activity.aution.AutionAll">
+
+        <include
+            android:id="@+id/iAHN"
+            layout="@layout/actionbar_header_nav" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleview1"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iAHN"
+            android:layout_margin="10dp"
+
+            >
+
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "admin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "balram",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-redis": "^3.4.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-flash": "0.0.2",
+    "express-session": "^1.16.1",
+    "redis": "^2.8.0",
+    "uniqid": "^5.0.3"
+  }
+}

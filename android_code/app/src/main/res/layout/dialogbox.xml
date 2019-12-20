@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="10dp"
+    android:paddingBottom="20dp"
+    android:elevation="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.AppCompatImageView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:id="@+id/ivClose"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:onClick="onClick"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_close_black_24dp"
+
+        />
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/material1"
+        app:cardElevation="5dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_width="wrap_content"
+        android:background="@drawable/ripplecard"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivClose"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content">
+
+
+    <com.bidme.utils.CustomTextViewBold
+
+        android:id="@+id/PriceHTL"
+        android:text="@string/PHTL"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textSize="16sp"
+
+
+        android:layout_width="250dp"
+        android:textAlignment="center"
+
+        android:layout_height="wrap_content">
+
+    </com.bidme.utils.CustomTextViewBold>
+    </android.support.design.card.MaterialCardView>
+
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/material2"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/ripplecard"
+
+        app:cardElevation="5dp"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/material1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content">
+    <com.bidme.utils.CustomTextViewBold
+        android:id="@+id/PriceLTH"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="16sp"
+
+
+        android:text="@string/PLTH"
+        app:layout_constraintHorizontal_bias="0.502"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/PriceHTL"
+        app:layout_constraintVertical_bias="1.0">
+
+    </com.bidme.utils.CustomTextViewBold>
+    </android.support.design.card.MaterialCardView>
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/material3"
+        android:layout_width="wrap_content"
+        app:cardElevation="5dp"
+        android:background="@drawable/ripplecard"
+
+        android:layout_marginTop="10dp"
+
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/material2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content">
+
+    <com.bidme.utils.CustomTextViewBold
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PriceLTH"
+
+        android:id="@+id/NewArrivals"
+        android:textAlignment="center"
+        android:padding="10dp"
+
+        android:layout_marginTop="10dp"
+
+        android:text="@string/NewAriival"
+        android:textSize="16sp"
+
+        android:layout_width="250dp"
+        android:textColor="@color/black"
+
+        android:layout_height="wrap_content">
+
+    </com.bidme.utils.CustomTextViewBold>
+    </android.support.design.card.MaterialCardView>
+
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/material4"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/ripplecard"
+
+        app:layout_constraintTop_toBottomOf="@+id/material3"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="5dp"
+        app:cardElevation="5dp"
+        android:layout_height="wrap_content">
+    <com.bidme.utils.CustomTextViewBold
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewArrivals"
+
+        android:id="@+id/EndingSoon"
+        android:text="@string/Ending_soon"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+
+
+
+        android:layout_width="250dp"
+        android:layout_height="wrap_content">
+
+    </com.bidme.utils.CustomTextViewBold>
+    </android.support.design.card.MaterialCardView>
+
+</android.support.constraint.ConstraintLayout>
+</layout>

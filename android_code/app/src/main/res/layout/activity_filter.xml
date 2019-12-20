@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        tools:context=".activity.FilterActivity">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@android:color/widget_edittext_dark"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ivBackFilter"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+
+
+                    android:layout_weight="0.1"
+
+                    android:src="@drawable/ic_back" />
+
+                <com.bidme.utils.CustomTextViewBold
+                    android:id="@+id/tvtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:background="@color/white"
+                    android:text="Filters"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    />
+
+                <com.bidme.utils.CustomButton
+                    android:id="@+id/clearfilter"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/greyripple"
+                    android:onClick="clear"
+                    android:text="CLEAR FILTER"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/btn_bg"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_above="@+id/cardViewbottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardView"
+            android:background="@color/off_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/off_white"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/off_white"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        android:background="@drawable/ic_voicemail_black_24dp" />
+
+                    <com.bidme.utils.CustomTextViewBold
+                        android:id="@+id/tvdis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/off_white"
+                        android:text="(Discover ads near by you)"
+                        android:padding="5dp"
+                        android:textColor="@color/btn_bg"
+
+                        android:textSize="14sp"
+
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                     <com.xw.repo.BubbleSeekBar
+                          android:id="@+id/bsbFilter"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          app:bsb_second_track_color="@color/bg_color"
+                         android:layout_margin="5dp"
+                          app:bsb_section_count="10"
+                          app:bsb_max="320"
+                          app:bsb_min="0"
+                          app:bsb_section_text_position="below_section_mark"
+                          app:bsb_show_section_text="true"
+                          app:bsb_thumb_text_size="18sp"
+                          app:bsb_touch_to_seek="true"
+                         />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray1"
+                    android:layout_marginTop="15dp"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/off_white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/ic_bookmarkss"
+
+                        android:padding="5dp" />
+
+                    <com.bidme.utils.CustomTextViewBold
+                        android:id="@+id/tvtitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/off_white"
+                        android:padding="10dp"
+                        android:text="Categories"
+                        android:textColor="@color/btn_bg"
+                        android:visibility="visible"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycleview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="10dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/off_white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+
+
+                        android:background="@drawable/ic_money_bag" />
+
+                    <com.bidme.utils.CustomTextViewBold
+                        android:id="@+id/tvtitle4"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/off_white"
+
+                        android:padding="10dp"
+                        android:text="Set a price range"
+                        android:textColor="@color/btn_bg"
+                        android:textSize="14sp"
+
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/off_white"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                  >
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        app:cardBackgroundColor="@color/off_white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp">
+
+                        <com.bidme.utils.CustomEditText
+                            android:id="@+id/MinPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+
+                            android:background="@color/off_white"
+                            android:hint="From"
+                            android:inputType="number"
+
+                            android:padding="10dp"
+
+                            android:textColor="@color/black" />
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        app:cardBackgroundColor="@color/off_white"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="5dp">
+
+
+                        <com.bidme.utils.CustomEditText
+                            android:id="@+id/MaxPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/off_white"
+                            android:hint="to"
+                            android:inputType="number"
+
+                            android:padding="10dp"
+                            android:textColor="@color/black" />
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <android.support.v7.widget.CardView
+
+            android:id="@+id/cardViewbottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            app:cardBackgroundColor="@android:color/widget_edittext_dark"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp">
+            <com.bidme.utils.CustomButton
+                android:id="@+id/Applyfilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/btn_bg"
+                android:text="APPLY FILTER"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </android.support.v7.widget.CardView>
+
+
+
+        <!--   </LinearLayout>-->
+
+    </RelativeLayout>
+
+</layout>

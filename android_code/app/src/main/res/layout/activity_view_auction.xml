@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".activity.aution.ViewAuction">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/ivGallery"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/noimage" />
+
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/ivGallery"
+                        android:layout_marginTop="-30dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/ivProfile"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="-25dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="10dp"
+
+                                android:orientation="vertical">
+
+                                <com.bidme.utils.CustomTextViewBold
+                                    android:id="@+id/tvName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp" />
+
+                                <com.bidme.utils.CustomTextView
+                                    android:id="@+id/tvDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                                <com.willy.ratingbar.ScaleRatingBar xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/simpleRatingBar1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    app:srb_clearRatingEnabled="true"
+                                    app:srb_clickable="true"
+                                    app:srb_drawableEmpty="@drawable/empty"
+                                    app:srb_drawableFilled="@drawable/filled"
+                                    app:srb_isIndicator="true"
+                                    app:srb_minimumStars="0"
+                                    app:srb_numStars="5"
+                                    android:visibility="gone"
+                                    app:srb_scrollable="true"
+                                    app:srb_starHeight="20dp"
+                                    app:srb_starPadding="5dp"
+                                    app:srb_starWidth="20dp"
+                                    app:srb_stepSize="0.5" />
+
+                                <RelativeLayout
+                                    android:id="@+id/relayconuntdown"
+                                    android:layout_below="@+id/tvMinBidTxt"
+                                    android:layout_marginTop="5dp"
+                                    android:visibility="gone"
+
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <com.bidme.utils.CustomTextViewBold
+                                        android:layout_width="wrap_content"
+                                        android:text="@string/Ends_in"
+                                        android:layout_centerVertical="true"
+                                        android:textColor="@color/bg_color"
+                                        android:id="@+id/end"
+                                        android:gravity="start"
+                                        android:layout_alignParentLeft="true"
+                                        android:textAlignment="center"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:layout_height="wrap_content">
+
+                                    </com.bidme.utils.CustomTextViewBold>
+
+
+
+                                    <cn.iwgang.countdownview.CountdownView
+                                        android:id="@+id/counter"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/end"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="@dimen/_5sdp"
+
+
+                                        android:padding="2dp"
+                                        app:isHideTimeBackground="true"
+                                        app:isShowHour="true"
+                                        app:isShowMillisecond="false"
+                                        app:isShowMinute="true"
+                                        app:isShowSecond="true"
+                                        app:isShowDay="true"
+                                        app:isTimeTextBold="true"
+                                        app:suffixGravity="bottom"
+                                        app:suffixTextColor="#1334F0"
+                                        app:suffixTextSize="@dimen/_10sdp"
+                                        app:timeTextColor="#1334F0"
+                                        app:timeTextSize="@dimen/_12sdp"
+                                        app:suffixHour="Hour"
+                                        app:suffixMinute="Min"
+                                        app:suffixSecond="Sec"
+                                        app:suffixDay="Days"
+                                      />
+                                </RelativeLayout>
+
+                                <com.bidme.utils.CustomTextViewBold
+                                    android:id="@+id/tvViewProfile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:visibility="gone"
+                                    android:layout_marginTop="10dp"
+                                    android:text="View Profile"
+                                    android:textColor="@color/blue"
+                                    android:textSize="16sp"
+                                    />
+
+
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/gray" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <com.bidme.utils.CustomTextViewBold
+                                        android:id="@+id/catname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:text=""
+                                        android:textSize="18sp" />
+
+
+                                    <com.bidme.utils.CustomTextViewBold
+                                        android:id="@+id/tvPrice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="1"
+                                        android:gravity="end"
+                                        android:text=""
+                                        android:textColor="@color/bg_color"
+                                        android:textSize="18sp" />
+
+                                </LinearLayout>
+
+
+                                <com.bidme.utils.CustomTextView
+                                    android:id="@+id/tvShortDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_weight="1"
+                                    android:text=""
+                                    android:textSize="14sp" />
+                            <com.bidme.utils.CustomTextView
+                                    android:id="@+id/ShortDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_weight="1"
+                                    android:text=""
+                                    android:textSize="14sp" />
+
+
+                                <com.bidme.utils.CustomTextView
+                                    android:id="@+id/StartDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:text=""
+                                    android:textSize="14sp" />
+
+                                <com.bidme.utils.CustomTextView
+                                    android:id="@+id/EndDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_weight="1"
+
+                                    android:text=""/>
+
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/gray" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/ivMap"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:src="@drawable/ic_map_dummy" />
+
+                                    <LinearLayout
+                                        android:id="@+id/lineZip"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_marginLeft="15dp"
+
+                                        android:layout_toRightOf="@+id/ivMap"
+                                        >
+
+                                        <com.bidme.utils.CustomTextView
+                                            android:id="@+id/tvZip"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="12sp"
+                                            android:textColor="@color/bg_color"/>
+
+
+                                        <com.bidme.utils.CustomTextView
+                                            android:id="@+id/tvTown"
+                                            android:layout_width="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                            android:textColor="@color/bg_color"/>
+
+
+
+
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_below="@+id/lineZip"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginTop="5dp"
+
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_toRightOf="@+id/ivMap"
+                                        android:orientation="vertical">
+
+                                        <com.bidme.utils.CustomTextViewBold
+                                            android:id="@+id/tvKm"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Address"
+                                            android:textSize="12sp"
+                                          />
+
+                                        <com.bidme.utils.CustomTextView
+                                            android:id="@+id/tvAddress"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=""
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/gray" />
+
+                                <com.bidme.utils.CustomTextView
+                                    android:id="@+id/tvDescription"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:visibility="gone"
+                                    android:textSize="14sp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:visibility="gone"
+                                    android:background="@color/gray" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/line1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:orientation="vertical">
+
+                                <com.bidme.utils.CustomTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray1"
+                                    android:padding="10dp"
+                                    android:text="Bids"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp" />
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rvBids"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                </android.support.v7.widget.RecyclerView>
+
+                                <com.bidme.utils.CustomTextViewBold
+                                    android:id="@+id/tvViewAllBid"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:padding="5dp"
+                                    android:text="View All Bid"
+                                    android:textColor="@color/blue"
+                                    android:textSize="16sp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/gray"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:visibility="gone">
+
+                                    <com.bidme.utils.CustomTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Share Product :"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_facebook" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_whatsapp" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_twitter" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/gray"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/gray" />
+
+
+                                <com.bidme.utils.CustomTextViewBold
+                                    android:id="@+id/comment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:drawableLeft="@drawable/ic_edit_black_24dp"
+                                    android:padding="10dp"
+                                    android:text="   Give your Rating"
+                                    android:textColor="@color/blue"
+                                    android:textSize="18sp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/gray" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/linRating"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+
+                                <com.bidme.utils.CustomTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gray1"
+                                    android:padding="10dp"
+
+                                    android:text="All Rating"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp" />
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rvAllRating"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp">
+
+                                </android.support.v7.widget.RecyclerView>
+
+                                <com.bidme.utils.CustomTextViewBold
+                                    android:id="@+id/tvViewRating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end"
+                                    android:padding="10dp"
+
+                                    android:text="View All Rating"
+                                    android:textColor="@color/blue"
+                                    android:textSize="16sp" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivProfile"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="30dp"
+                            android:src="@drawable/bg_img"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="3dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivwin"
+                            android:visibility="gone"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/win"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="3dp" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </android.support.v4.widget.NestedScrollView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="#4A000000">
+
+
+                <ImageView
+                    android:id="@+id/ivBack1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back_white" />
+
+                <LinearLayout
+                    android:id="@+id/llViewImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgegallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_image_gallery" />
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvMediaCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="70dp"
+                    android:layout_toRightOf="@+id/llViewImage"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_share"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/ivFavScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClick"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_unfav" />
+
+                <ImageView
+                    android:id="@+id/ivFavfilled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivShare"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_filledfav"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rlBottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/btn_bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llOffer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_bid" />
+
+                <com.bidme.utils.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Place Bid"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llChatscreen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+
+                android:onClick="onClick"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chat_icon" />
+
+                <com.bidme.utils.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Chat"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

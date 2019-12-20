@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "86974934732",
+    "firebase_url": "https://bidme-260613.firebaseio.com",
+    "project_id": "bidme-260613",
+    "storage_bucket": "bidme-260613.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86974934732:android:4ea3676b4cd1c508735c69",
+        "android_client_info": {
+          "package_name": "com.bidme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86974934732-uqtu9mngdid85op6khanvct03ihmtrd0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidme",
+            "certificate_hash": "69e850be7c532b26bc19941df7fe6b534968b3ca"
+          }
+        },
+        {
+          "client_id": "86974934732-d70hfrbvug1qjmb36k6afen3keha8q3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVNu62odren0ov0bRWYil0lmG-SYHA8fU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86974934732-d70hfrbvug1qjmb36k6afen3keha8q3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

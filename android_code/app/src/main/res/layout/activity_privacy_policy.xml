@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/_10sdp"
+       >
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white">
+
+        <com.bidme.utils.CustomTextViewBold
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/PrivacyPolicy"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlclose"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:src="@drawable/black_close" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </android.support.design.card.MaterialCardView>
+
+
+    <WebView
+        android:id="@+id/mWebView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_400sdp"
+
+        android:background="@color/off_white"
+        android:layout_below="@+id/cardView"/>
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_alignParentBottom="true"
+        app:cardElevation="@dimen/_10sdp"
+        >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/checkPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agree"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <com.bidme.utils.CustomButton
+            android:id="@+id/btnNext"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            android:background="@drawable/button_selector"
+            android:text="@string/Next"
+            android:textColor="@color/white"
+
+            android:textSize="@dimen/_10sdp" />
+
+
+  <com.bidme.utils.CustomButton
+            android:id="@+id/btnNext2"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_gravity="end"
+            android:visibility="visible"
+            android:background="@drawable/button_pressed"
+            android:text="@string/Next"
+            android:textColor="@color/white"
+
+            android:textSize="@dimen/_10sdp" />
+
+
+        <com.bidme.utils.CustomButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            android:background="@drawable/button_selector"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+
+            android:textSize="@dimen/_10sdp" />
+
+
+
+
+
+    </LinearLayout>
+    </android.support.design.card.MaterialCardView>
+
+</RelativeLayout>
+</layout>
+

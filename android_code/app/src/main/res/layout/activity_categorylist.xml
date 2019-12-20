@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        android:orientation="vertical"
+        tools:context=".activity.categories.CategoryListActivity">
+        <include layout="@layout/actionbar_header_nav"
+
+           android:id="@+id/iAHN" >  </include>
+
+
+
+      <!--  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.samyotech.subasta.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/off_white"
+                android:padding="3dp"
+                android:text="@string/indrapuri"
+                android:textColor="@color/colorInfo"
+                android:textSize="25sp"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_light"></View>
+
+
+        <com.bidme.utils.CustomTextViewBold
+            android:id="@+id/tvcatname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="@string/showingcategories"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+
+            android:padding="5dp"
+            android:scrollbars="vertical">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+</layout>

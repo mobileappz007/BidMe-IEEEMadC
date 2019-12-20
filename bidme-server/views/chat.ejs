@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="socket.io/socket.io.js"></script>
+
+	<script type="text/javascript">
+		var socket = io();
+		socket.on("onlineUser", function(data){
+			console.log(data);
+			var x = "";
+			for(var prop in data)
+			{
+				var y = data[prop];
+				x += '<li><a onclick="getusername(\''+prop+'\', \''+data[prop]+'\')">'+data[prop]+'</a></li>';
+			}
+			$("#o_user").html(x);
+		});
+
+		var sendername = "";
+		socket.on("me", function(data){
+			// console.warn(data);
+			sendername=data;
+			$(".label-info").html(data);
+		});
+		var a = "";
+		var b = "";
+		function getusername(p, n)
+		{
+			b = p;
+			a = n;
+			$(".label-success").html(n);
+		}
+		function send()
+		{
+			var obj = { to : b, sender : sendername, msg : $("#msg").val()};
+			console.log(obj);
+			socket.emit("chat", obj);
+			$("#show_msg").append("<p><b>Me</b> : "+$("#msg").val()+"</p>");
+			$("#msg").val("");
+		}
+
+		socket.on("chat", function(data){
+			$("#show_msg").append("<p><b>"+data.name+"</b> : "+data.msg+"</p>");
+		});
+
+
+		$(document).ready(function(){
+			$("#msg").keyup(function(){
+				socket.emit("typing", { name : sendername});
+			});
+		});
+
+
+		socket.on("typing1", function(data){
+			$(".text-muted").html(data.name+" is Typing");
+		});
+		socket.on("clearmsg", function(data){
+			$(".text-muted").html("");
+		});
+
+	</script>
+
+
+</head>
+<body>
+<div class="container">
+	<br />
+	<br />
+	<h2>Wellcome to Chat Box <span class="label label-info"></span></h2>
+	<div class="col-md-3">
+		<h3>Online User</h3>
+		<ul id="o_user" class="list-group">
+			
+		</ul>
+
+	</div>
+	<div class="col-md-8">
+		<h3>Chatting With <span class="label label-success"></span></h3>
+		<div id="show_msg" class="well" style="background-color: gray; height: 300px; overflow-y: scroll;">
+		</div>
+		<input id="msg" type="text" class="form-control" placeholder="Your Message">
+		<br />
+		<p class="text-muted"></p>
+		<br />
+		<button onclick="send()" class="btn btn-success">Send</button>
+	</div>
+</div>
+</body>
+</html>

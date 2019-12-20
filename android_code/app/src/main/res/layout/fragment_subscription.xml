@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/off_white"
+            android:orientation="vertical"
+            tools:context=".activity.authentication.Sign_Up">
+
+           <!-- <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@drawable/card_shap_shadow">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back" />
+
+                <com.samyotech.subasta.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:shadowRadius="50"
+                    android:text="@string/plan"
+                    android:textSize="20sp"
+
+                    />
+
+            </RelativeLayout>-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvplans"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="40dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                >
+
+
+            </android.support.v7.widget.RecyclerView>
+
+
+
+
+        </RelativeLayout>
+
+    </layout>

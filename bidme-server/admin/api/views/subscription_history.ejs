@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<%- include ./partial/header.ejs %>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+                                             <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                     
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- .row -->
+             
+                   
+                                  <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Subscription History </h3>
+                          
+                            <div class="table-responsive">
+                                <table class="table">
+                                               
+                                        <thead>
+                                            <tr>
+                                                <th>S.No.</th>
+                                                <th>Invoice Id</th>
+                                                <th>Package Name</th>
+                                                <th>Customer Name</th> 
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                                <th>Total Price</th> 
+                                                <th>Tax</th>
+                                                <th>Discount</th>   
+                                                <th>Final Price</th>
+                                                <th>Currency Name</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                <% result.forEach(function(item, i){ %>
+                <tr>
+                <td><%= i+1 %></td>
+                <td><%= item.invoice_id %></td>
+                <td><%= item.package_name %></td>
+                <td><%= item.name %></td>
+                <td><%= item.start_date %></td>
+                <td><%= item.end_date %></td>
+                <td><%= item.total_price %></td>
+                <td><%= item.tax %></td>
+                <td><%= item.discount %></td>
+                <td><%= item.final_price %></td>
+                 <td><%= item.currency_type %></td>
+            </tr>
+            <div class="modal fade" id="delModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Delete User</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Are You sure want to delete this Product <%= item.title %> !</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" id="del_btn" data-dismiss="modal" onclick="callHref()">Delete</button>
+                    <button class="btn btn-default" data-dismiss="modal">Cancle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <% }) %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                           </div>
+                         </div>
+                       </div>
+                </div>
+
+                <!-- /.row -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <div class="right-sidebar">
+                    <div class="slimscrollright">
+                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="r-panel-body">
+                            <ul id="themecolors" class="m-t-20">
+                                <li><b>With Light sidebar</b></li>
+                                <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                                <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                                <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                                <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                                <li><b>With Dark sidebar</b></li>
+                                <br/>
+                                <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                                <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                                <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                                <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                            </ul>
+                            <ul class="m-t-20 all-demos">
+                                <li><b>Choose other demos</b></li>
+                            </ul>
+                            <ul class="m-t-20 chatonline">
+                                <li><b>Chat option</b></li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/john.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- /.container-fluid -->
+              <%- include ./partial/footer.ejs %>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="../assets/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="../assets/js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../assets/js/custom.min.js"></script>
+    <script src="../assets/js/validator.js"></script>
+    <!--Style Switcher -->
+    <script src="../assets/js/demo.js"></script>
+    
+    <script src="../plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>
+    <script type="text/javascript">
+    var id = "";
+    function setId(x)
+    {
+        // alert(x);
+        id = x;
+    }
+    function callHref()
+    {
+        // alert(id);
+        document.getElementById(id).click();
+    }
+</script>
+ <!--  <script>
+   $( document ).ready(function() {
+       console.log("hello");
+       $('#class').change(function(){
+         var  cat_id=$(this).val();
+
+         console.log(cat_id);
+       var cat_id =cat_id;
+       $.ajax({
+       type:'post',
+       url:'http://52.77.32.209:3003/addAuction1',
+       data:{'cat_id':cat_id},
+       success: function(data){
+       var htm = "";
+       if(data!='0'){
+       var result = JSON.parse(JSON.stringify(data));
+
+       console.log(result);
+       $.each(result, function(key, result){
+           htm +=  '<option value="'+result.sub_cat_id+'">'+result.sub_cat_title+'</option>';
+           });
+       }
+       $('#subcategory').html(htm);
+       },
+       error: function(e){
+       alert(e.toSourceCode);
+       }
+       });
+   });
+   });
+</script>
+
+  <script>
+   $( document ).ready(function() {
+       console.log("hello");
+       $('#subcategory').change(function(){
+         var  sub_cat_id=$(this).val();
+
+         console.log(sub_cat_id);
+       var sub_cat_id =sub_cat_id;
+       $.ajax({
+       type:'post',
+       url:'http://52.77.32.209:3003/addBrand1',
+       data:{'sub_cat_id':sub_cat_id},
+       success: function(data){
+       var htm = "";
+       if(data!='0'){
+       var result = JSON.parse(JSON.stringify(data));
+
+       console.log(result);
+       $.each(result, function(key, result){
+           htm +=  '<option value="'+result.brand_id+'">'+result.brand_name+'</option>';
+           });
+       }
+       $('#brand_cat').html(htm);
+       },
+       error: function(e){
+       alert(e.toSourceCode);
+       }
+       });
+   });
+   });
+</script>
+
+  <script>
+   $( document ).ready(function() {
+       console.log("hello");
+       $('#brand_cat').change(function(){
+         var  brand_id=$(this).val();
+
+         console.log(brand_id);
+       var brand_id =brand_id;
+       $.ajax({
+       type:'post',
+       url:'http://52.77.32.209:3003/addModel1',
+       data:{'brand_id':brand_id},
+       success: function(data){
+       var htm = "";
+       if(data!='0'){
+       var result = JSON.parse(JSON.stringify(data));
+
+       console.log(result);
+       $.each(result, function(key, result){
+           htm +=  '<option value="'+result.model_id+'">'+result.model_name+'</option>';
+           });
+       }
+       $('#model_cat').html(htm);
+       },
+       error: function(e){
+       alert(e.toSourceCode);
+       }
+       });
+   });
+   });
+</script> -->

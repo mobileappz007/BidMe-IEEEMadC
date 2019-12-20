@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<%- include ./partial/header.ejs %>
+      
+            <!-- ============================================================== -->
+            <!-- End Left Sidebar -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Page Content -->
+            <!-- ============================================================== -->
+                    <!-- .row -->
+                       <!-- .row -->
+             <div id="page-wrapper">
+   <div class="container-fluid">
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="header">
+              <h2>Send Notification</h2>
+              <div class="send_msg" style="float: right; padding: 5px 0;margin-top: -29px;">
+              <input disabled="disabled" id="send_msg" class="btn btn-success" type="submit" value="Send Message" data-target="#msgmodal" data-toggle="modal">
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+              <div role="dialog" class="modal fade" id="msgmodal" style="display: none;">
+              <div class="modal-dialog">
+
+              <!-- Modal content--> 
+                        
+              <form method="post" action="/send_notification">    
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4><b>Send Notification</b></h4>
+                    <button data-dismiss="modal" class="close" type="button">×</button>
+                      </div>
+                      <div class="modal-body"> 
+                      <div class="form-group clearfix">
+                      <input type="hidden" id="uid" name="uid" va><br>
+                      </div>
+
+                      <div class="form-group clearfix">
+                      <label>Title</label>
+                      <input id="text" class="col-md-12" type="text" name="title" maxlength="15" required /><br>
+                      <span class="result">0 </span><span>/15</span>
+                      </div>
+
+                      <div class="form-group clearfix">
+                      <label>Notification Message</label>
+                      <textarea id="textfield1" name="msg" class="col-md-12" rows="4" maxlength="150" required></textarea><br>
+                      <span class="result1">0 </span><span>/150</span>
+                      </div>
+                      </div>
+                      
+                      <div class="modal-footer">
+                      <input type="submit" class="btn btn-success" value="Submit" id="notify-user">
+                      <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+                      </div>
+                      </div>
+                      </form>
+                      </div>
+                      </div>
+
+                    
+                             
+                            
+                                   
+                                <div class="panel-body">
+                                    
+                                    <table class="table table-bordered table-striped mb-none" id="datatable-editable">
+                                        <thead>
+                                            <tr>
+                                                <th>S.No.</th>
+                                                <th>Name</th>
+                                                <th>Image</th> 
+                                                <th>email</th>
+                                                <th>Contact No.</th>
+                                                <th>Send Message</th>
+                                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                <% result.forEach(function(item, i){ %>
+                <tr>
+                <td><%= i+1 %></td>
+                <td><%= item.name %></td>                
+            <td><img src="<%= item.image %>" height="50" width="50"></td>
+              <!--  	<td>This is not available in demo</td>
+               	<td>This is not available in demo</td> -->
+                <td><%= item.email %></td>
+                <td><%= item.mobile_no %></td>
+                
+<td> <input class="notification_check mychechk"  type="checkbox" value="<%=item.user_pub_id %>" name="check" style="opacity:1;position:inherit;"></td>  
+  </tr>
+      
+        <% }) %>                        </tbody>
+                                    </table>
+                                </div>
+                                   
+</div>                  <!-- end: page -->
+                   
+ <div>
+                   <% if (pageCount > 1) { %>
+          <ul class="pagination">
+              <% if (currentPage > 1) { %>
+                  <li><a href="/send_notification/?page=1">&laquo;</a></li>
+              <% } %>
+              <% var i = 1;
+              if (currentPage > 5) {
+                  i = +currentPage - 4;
+              } %>
+              <% if (i !== 1) { %>
+                  <li class="disabled"><a href="#">...</a></li>
+              <% } %>
+              <% for (i; i<=pageCount; i++) { %>
+                  <% if (currentPage == i) { %>
+                      <li class="active"><span><%= i %> <span class="sr-only">(current)</span></span></li>
+                  <% } else { %>
+                  <li><a href="/send_notification/?page=<%= i %>"><%= i %></a></li>
+                  <% } %>
+                  <% if (i == (+currentPage + 4)) { %>
+                      <li class="disabled"><a href="#">...</a></li>
+                  <% break; } %>
+              <% } %>
+              <% if (currentPage != pageCount) { %>
+              <li><a href="/send_notification/?page=<%= pageCount %>">&raquo;</a></li>              <% } %>
+          </ul>
+      <% } %>
+              </div>      <!-- /.row -->
+                    <!-- ============================================================== -->
+                    <!-- .right-sidebar -->
+                    <div class="right-sidebar">
+                        <div class="slimscrollright">
+                            <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                            <div class="r-panel-body">
+                                <ul id="themecolors" class="m-t-20">
+                                    <li><b>With Light sidebar</b></li>
+                                    <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                                    <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                                    <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                                    <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                                    <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                                    <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                                    <li><b>With Dark sidebar</b></li>
+                                    <br/>
+                                    <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                                    <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                                    <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                                    <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                                    <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                                    <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                                </ul>
+                                <ul class="m-t-20 all-demos">
+                                    <li><b>Choose other demos</b></li>
+                                </ul>
+                                <ul class="m-t-20 chatonline">
+                                    <li><b>Chat option</b></li>
+                                    <li>
+                                        <a href="javascript:void(0)"><img src="../plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><img src="../plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><img src="../plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><img src="../plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><img src="../plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><img src="../plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><img src="../plugins/images/users/john.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"><img src="../plugins/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Right sidebar -->
+                    <!-- ============================================================== -->
+              </div>
+            <!-- /.container-fluid -->
+               <%- include ./partial/footer.ejs %>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+        <!-- jQuery -->
+        <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Menu Plugin JavaScript -->
+        <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+        <!--slimscroll JavaScript -->
+        <script src="../assets/js/jquery.slimscroll.js"></script>
+        <!--Wave Effects -->
+        <script src="../assets/js/waves.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="../assets/js/custom.min.js"></script>
+        <script src="../assets/js/validator.js"></script>
+        <!--Style Switcher -->
+        <script src="../plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+    </body>
+
+    </html>
+
+
+
+<script>
+
+$(document).ready(function(){
+$('.mychechk').on('change', function() {
+$('#uid').val('');
+var sThisVal='';
+$('.mychechk').each(function () {
+if(this.checked){
+
+sThisVal = sThisVal+$(this).val()+',';
+$('#uid').val(sThisVal);
+}
+});
+if( sThisVal!=''){
+$('#send_msg').prop("disabled", false);
+}else{
+$('#send_msg').prop("disabled", true);
+}
+});
+});
+</script>
+
+
+<script>
+    $(document).ready(function(){
+        $('input#textfield').on('keyup',function(){
+           var charCount = $(this).val().replace(/^(\s*)/g, '').length;
+            $(".result").text(charCount + " ");
+             $("#textfield").css({"border-color": "#007bff"});
+             
+
+        });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $('textarea#textfield1').on('keyup',function(){
+           var charCount = $(this).val().replace(/^(\s*)/g, '').length;
+            $(".result1").text(charCount + " ");
+            $("#textfield1").css({"border-color": "#007bff"});
+
+           
+        });
+    });
+</script>
+<script type="text/javascript">
+
+//notification hear
+
+    $(function(){
+
+        //button select all or cancel
+        $("#select-all").click(function () {
+            var all = $("input.select-all")[0];
+            all.checked = !all.checked
+            var checked = all.checked;
+            $("input.select-item").each(function (index,item) {
+                item.checked = checked;
+            });
+        });
+
+        //button select invert
+        $("#select-invert").click(function () {
+            $("input.select-item").each(function (index,item) {
+                item.checked = !item.checked;
+            });
+            checkSelected();
+        });
+
+        //button get selected info
+        $("#selected").click(function () {
+            var items=[];
+            $("input.select-item:checked:checked").each(function (index,item) {
+                items[index] = item.value;
+            });
+            if (items.length < 1) {
+                // alert("no selected items!!!");
+                 swal("Warning", "Please select user to send notification", "error");
+                 jQuery('#msgmodal').modal('hide');
+            }else {
+                jQuery('#msgmodall').modal('show');
+                jQuery('#type_of_com').val('sms');
+                // var values = items.join(',');
+                // console.log(values);
+                // var html = $("<div></div>");
+                // html.html("selected:"+values);
+                // html.appendTo("body");
+            }
+        });
+
+        //column checkbox select all or cancel
+        $("input.select-all").click(function () {
+            var checked = this.checked;
+            $("input.select-item").each(function (index,item) {
+                item.checked = checked;
+            });
+        });
+
+        //check selected items
+        $("input.select-item").click(function () {
+            var checked = this.checked;
+            console.log(checked);
+            checkSelected();
+        });
+
+        //check is all selected
+        function checkSelected() {
+            var all = $("input.select-all")[0];
+            var total = $("input.select-item").length;
+            var len = $("input.select-item:checked:checked").length;
+            console.log("total:"+total);
+            console.log("len:"+len);
+            all.checked = len===total;
+        }
+    });
+
+
+  jQuery(document).ready(function() {
+      jQuery('#allusers').dataTable({
+
+      });
+
+    jQuery('#notification_table1').dataTable({                    
+      "lengthMenu": [ [10, 50, 100, -1], [10, 50, 100, "All"] ],
+    });
+
+    var data = 
+    {
+      mobile:[],msg:'',title:''
+    }
+      jQuery(document).on('click','#select_all',function(){
+        
+          if(jQuery(this).prop('checked') == true)
+          {
+              jQuery('.notification_check').each(function(index, el) {
+              jQuery(this).prop('checked',true);
+              var mobile = jQuery(this).parent().prev().text(); 
+              data.mobile.push(mobile);             
+            });  
+          }
+          else{
+               jQuery('.notification_check').each(function(index, el) {
+               jQuery(this).prop('checked',false);
+               data.mobile=[];
+            }); 
+          }
+      });
+
+    Array.prototype.remove = function() {
+        var what, a = arguments, L = a.length, ax;
+        while (L && this.length) {
+            what = a[--L];
+            while ((ax = this.indexOf(what)) !== -1) {
+                this.splice(ax, 1);
+            }
+        }
+        return this;
+    };
+
+     jQuery(document).on('click','.notification_check',function(){
+
+      if(jQuery(this).prop('checked') == true){
+       
+          var mobile = jQuery(this).parent().prev().text(); 
+          data.mobile.push(mobile);       
+        }
+        else
+        {
+          var  mobile
+          var mobile = jQuery(this).parent().prev().text();
+          data.mobile.remove(mobile);           
+        }
+     });
+
+    jQuery(document).on('click','#notify-user',function(){
+
+      var msg = jQuery('#msgmodal textarea').val();
+      data.msg= msg;
+
+      var title = jQuery('#msgmodal input').val();
+      data.title= title;
+
+          $.ajax({
+
+          url: base_url+'Admin/firebase',
+          type: 'POST',
+          dataType: 'json',
+          data: data,
+          success:function(data)
+          {
+      s
+           swal("Success", "Notification send successfully.", "success");
+           swal({
+                  title: "Success",
+                  text: "Notification send successfully.",
+                  type: "success",
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "OK",
+                  closeOnConfirm: true,                
+                },
+      function(isConfirm){
+          if (isConfirm) {
+          window.location.href = base_url + "Admin/notifaction";
+          } 
+        });
+      data.mobile = [];data.title ='';data.msg ='';
+     }
+    })    
+  });
+});
+
+</script>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        android:orientation="vertical"
+        tools:context=".activity.authentication.Sign_Up">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="@android:color/widget_edittext_dark"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:background="@drawable/card_shap_shadow">
+
+                        <ImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="16dp"
+                            android:src="@drawable/ic_back" />
+
+                        <com.bidme.utils.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:textColor="@color/black"
+                            android:shadowRadius="50"
+
+                            android:text="@string/sign_up"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="25dp"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardViewProfile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="@color/bg_color"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ivProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_camera" />
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivProfilePic"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+
+                        </RelativeLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp">
+
+                        <com.bidme.utils.CustomEditText
+                            android:id="@+id/et_Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/user_namee"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/ic_sinuser"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:singleLine="true"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.bidme.utils.CustomEditText
+                            android:id="@+id/et_firstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/First_Name"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/ic_nametag"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:singleLine="true"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.bidme.utils.CustomEditText
+                            android:id="@+id/et_LastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Last_Name"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/ic_nametag"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:singleLine="true"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+<android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.bidme.utils.CustomEditText
+                            android:id="@+id/Town"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Town"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/ic_buildings"
+                            android:inputType="text"
+                            android:maxLength="30"
+                            android:singleLine="true"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+<android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.bidme.utils.CustomEditText
+                            android:id="@+id/zipCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/zip_Code"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/ic_zip_code"
+                            android:inputType="number"
+                            android:maxLength="30"
+                            android:singleLine="true"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.bidme.utils.CustomEditText
+                            android:id="@+id/et_Email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Email_id"
+                            android:inputType="textEmailAddress"
+                            android:drawableLeft="@drawable/ic_mail111"
+                            android:drawablePadding="10dp"
+
+                            android:maxLength="30"
+                            android:singleLine="true"
+                            android:textSize="16sp" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!--     <com.hbb20.CountryCodePicker
+                             android:id="@+id/ccp"
+                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                             android:layout_gravity="center_vertical"
+                            app:ccp_countryAutoDetectionPref="SIM_NETWORK_LOCALE"
+                             app:ccp_defaultNameCode="IN"
+                             app:ccp_defaultPhoneCode="1"
+                             app:ccp_hintExampleNumber="true"
+                            app:ccp_hintExampleNumberType="MOBILE"
+                            app:ccp_showFlag="false"
+                             app:ccp_textSize="16sp" />-->
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/cCodePicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                        </com.hbb20.CountryCodePicker>
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <com.bidme.utils.CustomEditText
+                                android:id="@+id/et_Mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/mobile_no"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textSize="16sp" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.bidme.utils.CustomEditText
+                                android:id="@+id/et_Password"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:drawableLeft="@drawable/ic_password"
+                                android:drawablePadding="10dp"
+                                android:hint="@string/Password"
+                                android:inputType="textPassword"
+                                android:singleLine="true"
+                                android:text="" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/ivPass"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="15dp"
+                            android:padding="5dp"
+                            android:src="@drawable/passwordhide" />
+
+
+                    </RelativeLayout>
+
+                      <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.bidme.utils.CustomEditText
+                                android:id="@+id/et_confirm_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:drawableLeft="@drawable/ic_locked_new"
+                                android:drawablePadding="10dp"
+                                android:hint="@string/confirm_pass"
+                                android:inputType="textPassword"
+                                android:singleLine="true"
+                                android:text="" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/ivConfirmPass"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="15dp"
+                            android:padding="5dp"
+                            android:src="@drawable/passwordhide" />
+
+
+                    </RelativeLayout>
+
+
+                    <com.bidme.utils.CustomButton
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/button_selector"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="50"
+                        android:text="@string/Next"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rlSnackbar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"></RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

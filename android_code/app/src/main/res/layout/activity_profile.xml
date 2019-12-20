@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.authentication.UpdateProfile">
+
+        <LinearLayout
+            android:id="@+id/iActProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:id="@+id/profileback"
+                android:onClick="onClick"
+                android:clickable="true"
+
+
+                android:src="@drawable/ic_back_white"
+
+                />
+
+            <com.bidme.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="10.51"
+                android:gravity="center_horizontal"
+                android:text="@string/profile"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/profilenotification"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_notification_blank" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+
+            android:padding="10dp"
+            tools:ignore="MissingConstraints">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/civProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="50dp"
+                android:src="@color/grey"
+                app:layout_constraintTop_toBottomOf="@+id/iActProfile"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+
+            <com.bidme.utils.CustomEditText
+                android:id="@+id/ctvName"
+                android:layout_width="214dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="36dp"
+                android:editable="true"
+                android:hint="@string/full_name"
+                android:textSize="25sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="108dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="503dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/llProfile"
+            tools:ignore="MissingConstraints">
+
+
+            <com.bidme.utils.CustomTextView
+                android:id="@+id/ctvContact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:layout_marginTop="44dp"
+                android:padding="10dp"
+                android:text="@string/contact"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/llProfile"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ctvContact">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email_black_24dp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <com.bidme.utils.CustomTextView
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/email"
+
+                    android:id="@+id/etEmail"
+
+                    android:textSize="24sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="90dp"
+                    tools:layout_editor_absoluteY="285dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ctvContact">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone_black_24dp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <com.bidme.utils.CustomTextView
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/phone"
+                    android:inputType="number"
+
+                    android:textSize="24sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="90dp"
+                    tools:layout_editor_absoluteY="285dp" />
+            </LinearLayout>
+
+            <com.bidme.utils.CustomEditText
+                android:id="@+id/cetPhoneno"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="52dp"
+                android:editable="true"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="82dp"
+                tools:layout_editor_absoluteY="315dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/cetPhoneno">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_location_black"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <com.bidme.utils.CustomTextView
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/address"
+                    android:textSize="24sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="90dp"
+                    tools:layout_editor_absoluteY="364dp" />
+            </LinearLayout>
+
+
+            <com.bidme.utils.CustomEditText
+                android:id="@+id/cetAddress"
+                android:layout_width="290dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="52dp"
+                android:editable="true"
+
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="82dp"
+                tools:layout_editor_absoluteY="385dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/cetAddress">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/ic_gender"
+
+                    app:layout_constraintEnd_toStartOf="@+id/ctvGender"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <com.bidme.utils.CustomTextView
+                    android:id="@+id/ctvGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/gender"
+                    android:textSize="24sp"
+
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="90dp"
+                    tools:layout_editor_absoluteY="385dp" />
+            </LinearLayout>
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:editable="true"
+                android:layout_marginRight="40dp"
+                android:orientation="horizontal"
+
+
+                android:padding="10dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="90dp"
+                tools:layout_editor_absoluteY="497dp">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+                    android:editable="true"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:editable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/female"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <com.bidme.utils.CustomButton
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:id="@+id/btnsubmitdata"
+                android:layout_margin="10dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/button_selector"
+                android:clickable="true"
+                android:onClick="onClick"
+
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="25dp" />
+
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

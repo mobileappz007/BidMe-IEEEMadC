@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".activity.categories.AddBid">
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.bidme.utils.CustomTextViewBold
+                android:id="@+id/tvtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_alignParentLeft="true"
+                android:drawableLeft="@drawable/ic_pacebid"
+                android:drawablePadding="10dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato_bold"
+                android:padding="10dp"
+                android:text="@string/bid"
+                android:textColor="@color/bg_color"
+
+                android:textSize="18sp"
+
+                />
+
+
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_close_black_24dp"
+
+            />
+
+
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@color/white"
+
+                android:padding="5dp">
+
+                <com.bidme.utils.CustomTextViewBold
+                    android:id="@+id/tvBidProductname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/ic_process"
+                    android:fontFamily="@font/lato_bold"
+                    android:hint="Product name"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+
+                    />
+
+                <com.bidme.utils.CustomTextViewBold
+                    android:id="@+id/tvBidProductprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/bg_color"
+
+                    android:drawableLeft="@drawable/ic_cost"
+                    android:background="@color/white"
+                    android:fontFamily="@font/lato_bold"
+                    android:hint="Price"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+
+
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_light"></View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+               >
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+
+                    >
+                    <com.bidme.utils.CustomEditText
+                        android:layout_toRightOf="@+id/tvMinbid"
+                        android:id="@+id/etBidPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:textColorHint="@color/blue"
+                        android:hint="Add Min Bid price in 'DKR'."
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/ic_affordable"
+                        android:gravity="start"
+                        android:textColor="@color/bg_color"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textSize="16sp"
+                        android:maxLines="1"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+            </RelativeLayout>
+
+            <com.bidme.utils.CustomButton
+                android:id="@+id/btnAddBid"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/button_selector"
+                android:padding="10dp"
+                android:text="@string/addbid"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

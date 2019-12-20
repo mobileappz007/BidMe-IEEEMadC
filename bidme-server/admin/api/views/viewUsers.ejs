@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<%- include ./partial/header.ejs %>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+                             <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                     
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- .row -->
+             
+
+                                  <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                            <h3 class="box-title">All Users</h3>
+                          
+                            <div class="table-responsive">
+                                <table id="myTable1" class="table table-hover manage-u-table">
+                                        <thead>
+                                            <tr>
+                                                <th>S.No.</th>
+                                                <th>Name</th>
+                                                <th>Image</th> 
+                                                <th>Email</th>
+                                                <th>Contact No.</th>
+                                                <th>Email Status</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                         		       
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                <% result.forEach(function(item, i){ %>
+                <tr>
+                <td><%= i+1 %></td>
+                <td><%= item.name %></td>
+            <td><img src="<%= item.image %>" height="50" width="50"></td>
+                <td><%= item.email %></td>
+                <td><%= item.mobile_no %></td>
+                 <td>
+
+
+
+                 <% if (item.email_verified){ %>
+                  <button class="btn btn-primary mr-2" id="changeEmail"  onclick="setEmailStatus('<%= item.user_pub_id %>')" value="<%= item.user_pub_id %>"  >Verified</button>
+                  
+                  <% }
+              else { %>
+                <button class="active_user btn-danger btn btn-sm" id="changeEmail"  onclick="setEmailStatus('<%= item.user_pub_id %>')" value="<%= item.user_pub_id %>" >Not Verified</button> <% } %>
+                </td>
+                 <td>
+
+
+
+                 <% if (item.status){ %>
+                  <button class="btn btn-primary mr-2" id="changeStatus"  onclick="setStatus('<%= item.user_pub_id %>')" value="<%= item.user_pub_id %>"  >Active</button>
+                  
+                  <% }
+              else { %>
+                <button class="active_user btn-danger btn btn-sm" id="changeStatus"  onclick="setStatus('<%= item.user_pub_id %>')" value="<%= item.user_pub_id %>" >Deactive</button> <% } %>
+                </td>
+
+<!--                  <td>This is not available in demo</td>
+                 <td>This is not available in demo</td> -->
+                 <td>       
+                <a href="/edit_user/<%= item.user_pub_id %>"><button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button></a>
+                <a id="<%= item.user_pub_id %>" href="/delete_user/<%= item.user_pub_id %>" style="display: none"></a>
+                <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5" data-target="#delModal" data-toggle="modal" onclick="setId('<%= item.user_pub_id %>')"><i class="icon-trash"></i></button>
+                    </td>
+             
+            </tr>
+            <div class="modal fade" id="delModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Delete User</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Are You sure want to delete!</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" id="del_btn" data-dismiss="modal" onclick="callHref()">Delete</button>
+                    <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <% }) %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        
+                        
+
+                        
+                </div>
+</div>
+</div>
+               
+
+                        <!-- end: page -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+                <!-- /.row -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <div class="right-sidebar">
+                    <div class="slimscrollright">
+                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="r-panel-body">
+                            <ul id="themecolors" class="m-t-20">
+                                <li><b>With Light sidebar</b></li>
+                                <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                                <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                                <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                                <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                                <li><b>With Dark sidebar</b></li>
+                                <br/>
+                                <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                                <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                                <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                                <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                            </ul>
+                            <ul class="m-t-20 all-demos">
+                                <li><b>Choose other demos</b></li>
+                            </ul>
+                            <ul class="m-t-20 chatonline">
+                                <li><b>Chat option</b></li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/john.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+          </div>  <%- include ./partial/footer.ejs %>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="../plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+        <script src="../plugins/bower_components/datatables/datatables.min.js"></script>
+
+    <script src="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="../assets/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="../assets/js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../assets/js/custom.min.js"></script>
+    <script src="../assets/js/validator.js"></script>
+    <script src="../assets/js/demo.js"></script>
+    
+    <!--Style Switcher -->
+        <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+
+    <script src="../plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+
+</html>
+    <script type="text/javascript">
+    var id = "";
+    function setId(x)
+    {
+        // alert(x);
+        id = x;
+    }
+    function callHref()
+    {
+        // alert(id);
+        document.getElementById(id).click();
+    }
+
+
+
+    </script>
+
+

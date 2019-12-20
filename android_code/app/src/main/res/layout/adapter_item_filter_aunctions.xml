@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@android:color/widget_edittext_dark"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/Line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/off_white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/off_white"
+                android:orientation="vertical"
+
+                >
+
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="200dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/rippleimage"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_img" />
+
+
+                <RelativeLayout
+                    android:id="@+id/relay2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="5dp">
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvProductname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="30"
+                        android:padding="3dp"
+                        android:text=""
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvProductname"
+                        android:drawableLeft="@drawable/ic_place_black_24dp"
+
+                        android:padding="2dp"
+
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvLocation"
+                        android:layout_marginTop="-22dp"
+                        android:layout_toRightOf="@+id/tvLocation"
+                        android:padding="2dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvMinBidTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvLocation"
+                        android:layout_marginTop="3dp"
+                        android:padding="2dp"
+                        android:text="@string/Actual_Price"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvcurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvLocation"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/tvMinBidTxt"
+                        android:padding="2dp"
+
+                        android:textColor="@color/text_bg"
+                        android:textSize="12sp" />
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvLocation"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/tvMinBidTxt"
+                        android:padding="2dp"
+                        android:text=""
+                        android:textColor="@color/text_bg"
+                        android:textSize="12sp" />
+
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        card_view:cardCornerRadius="15dp"
+                        card_view:cardElevation="3dp">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivbid"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_auction_dummy" />
+                    </android.support.v7.widget.CardView>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</layout>

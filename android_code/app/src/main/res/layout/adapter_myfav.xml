@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<android.support.v7.widget.CardView android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:layout_margin="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/noimage"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+
+            >
+            <com.bidme.utils.CustomTextViewBold
+                android:id="@+id/tvtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginLeft="5dp"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/black"
+                />
+
+
+
+            <com.bidme.utils.CustomTextViewBold
+                android:id="@+id/tvPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="start"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+
+
+                android:textColor="@color/btn_bg"
+                android:textSize="@dimen/_10sdp"
+                />
+        </LinearLayout>
+        <com.bidme.utils.CustomTextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/_8sdp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+          <!--  <com.samyotech.subasta.utils.CustomButton
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+
+
+                android:text="EDIT"
+                android:maxLines="1"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+
+                android:background="@drawable/button_selector"/>-->
+
+            <com.bidme.utils.CustomButton
+                android:id="@+id/btnRemove"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="@string/Remove"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:background="@drawable/button_selector"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+</layout>

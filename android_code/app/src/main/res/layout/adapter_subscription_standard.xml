@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/off_white"
+
+        android:orientation="vertical"
+        tools:context=".activity.authentication.Sign_Up">
+
+
+        <LinearLayout
+            android:id="@+id/linercv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+            >
+
+                <android.support.design.card.MaterialCardView
+                    android:id="@+id/cvsubscription"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                   
+                    android:elevation="20dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linerplan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shap_subs"
+                        android:orientation="vertical">
+
+                        <com.bidme.utils.CustomTextView
+                            android:id="@+id/tvstanderd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="@string/standard"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <com.bidme.utils.CustomTextView
+                            android:id="@+id/tvprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:gravity="center"
+
+                            android:text="83$"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <com.bidme.utils.CustomTextView
+                            android:id="@+id/tvtotaldays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+
+                            android:lineSpacingExtra="0dp"
+                            android:lineSpacingMultiplier="2"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <com.bidme.utils.CustomTextView
+                            android:id="@+id/tvaunctioncount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+
+                            android:lineSpacingExtra="0dp"
+                            android:lineSpacingMultiplier="2"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <com.bidme.utils.CustomTextView
+                            android:id="@+id/status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:lineSpacingExtra="0dp"
+                            android:lineSpacingMultiplier="2"
+
+                            android:singleLine="false"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+
+                        <!--<com.samyotech.subasta.utils.CustomTextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="10 Featured Auction"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="20sp" />-->
+
+                        <!--<com.samyotech.subasta.utils.CustomTextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="45 Ads Per Month"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="20sp" />-->
+
+                        <!--<com.samyotech.subasta.utils.CustomTextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="10 Featured Ads"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="20sp" />-->
+                    </LinearLayout>
+                </android.support.design.card.MaterialCardView>
+
+
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/btnupgrade"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/cvsubscription"
+                   android:layout_centerHorizontal="true"
+
+
+                    android:layout_marginTop="-35dp"
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:elevation="10dp"
+                    android:shadowRadius="20"
+                    android:text="@string/upgrade"
+
+                    app:cornerRadius="25dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ripplecard"
+    android:padding="10dp" >
+
+    <com.bidme.utils.CustomTextViewBold
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        android:textColor="@color/bg_color"
+        android:layout_height="wrap_content">
+
+    </com.bidme.utils.CustomTextViewBold>
+
+    <ImageView
+        android:src="@drawable/ic_notification"
+        android:id="@+id/image"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp" />
+    <com.bidme.utils.CustomTextViewBold
+
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:text=""
+        android:id="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+
+
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image"
+        />
+    <com.bidme.utils.CustomTextView
+        android:textSize="12sp"
+        android:textColor="#8D000000"
+        android:text=""
+        android:id="@+id/message"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_centerHorizontal="true"
+
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image"
+        android:layout_below="@id/title"
+        />
+
+</RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>

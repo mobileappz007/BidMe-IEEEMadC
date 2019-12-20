@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:background="@drawable/noimage"
+                android:scaleType="fitXY" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/deactivate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+
+
+                android:layout_alignParentRight="true"
+                android:src="@drawable/deactivate"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="3.0dip" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/activate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+
+                android:layout_alignParentRight="true"
+                android:src="@drawable/actinew"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="3.0dip" />
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_below="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.bidme.utils.CustomTextViewBold
+                    android:id="@+id/tvtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+                <com.bidme.utils.CustomTextView
+                    android:id="@+id/tvShortDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2sdp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <com.bidme.utils.CustomTextViewBold
+                    android:id="@+id/tvPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"
+                    android:padding="@dimen/_2sdp"
+                    android:text=""
+                    android:textColor="@color/btn_bg"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <com.bidme.utils.CustomTextView
+                android:layout_below="@+id/line1"
+
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:padding="@dimen/_2sdp"
+                android:text=""
+                android:textSize="@dimen/_8sdp" />
+
+
+            <LinearLayout
+                android:layout_below="@+id/tvDate"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.bidme.utils.CustomButton
+                    android:id="@+id/btnEdit"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector"
+                    android:maxLines="1"
+                    android:text="EDIT"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+
+                    android:textSize="@dimen/_8sdp" />
+
+                <com.bidme.utils.CustomButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector"
+                    android:maxLines="1"
+                    android:text="Delete"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>

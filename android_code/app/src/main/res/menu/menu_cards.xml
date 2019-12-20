@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.inspire.rkspmatrimony.activity.MainActivity">
+
+    <item
+        android:id="@+id/camera_cards"
+        android:icon="@drawable/card_camera"
+        android:orderInCategory="100"
+        android:title="@string/action_camera"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/gallery_cards"
+        android:icon="@drawable/gallery_card"
+        android:orderInCategory="100"
+        android:title="@string/action_gallery"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/cancel_cards"
+        android:icon="@drawable/cards_cancel"
+        android:orderInCategory="100"
+        android:title="@string/cancel"
+        app:showAsAction="never" />
+</menu>

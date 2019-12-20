@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout >
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/tools"
+        android:id="@+id/cardClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+            <com.bidme.utils.CustomTextViewBold
+                android:id="@+id/pkgName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pkgname"
+                android:drawableLeft="@drawable/orange_buy"
+                android:drawablePadding="10dp"
+                android:textColor="@color/bg_color"
+                android:layout_weight="1"
+
+                android:textSize="16sp" />
+                <com.bidme.utils.CustomTextView
+                    android:id="@+id/totalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="end"
+                    android:textColor="@color/bg_color"
+                    android:hint=""
+                    android:textSize="16sp"
+                    android:padding="2dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <ImageView
+                    android:id="@+id/dis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/ic_discount"
+
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+                    <com.bidme.utils.CustomTextViewBold
+                        android:id="@+id/distitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:textColor="@color/bg_color"
+
+                        android:text="@string/Discount"
+                        android:padding="2dp"/>
+
+
+                <com.bidme.utils.CustomTextView
+                    android:id="@+id/discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+
+                    android:hint=""
+                    android:padding="2dp"/>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/tax1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/ic_tax11"
+                    android:text="Tax :"
+/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                  >
+                    <com.bidme.utils.CustomTextViewBold
+                        android:id="@+id/taxtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/bg_color"
+                        android:text="@string/Tax"
+                        android:padding="2dp"/>
+
+
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+
+                        android:hint=""
+                        android:padding="2dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray_light"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_calendar"
+                    android:padding="5dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <com.bidme.utils.CustomTextViewBold
+                    android:id="@+id/validaty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:textColor="@color/bg_color"
+
+                    android:text="@string/submit"
+                    android:padding="2dp"/>
+
+                <com.bidme.utils.CustomTextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+
+                    android:hint=""
+                    android:padding="2dp"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</layout>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/Line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/off_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/off_white"
+                android:orientation="vertical"
+
+
+                >
+
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+
+                    android:scaleType="fitXY"
+                    android:src="@drawable/noimage" />
+
+
+                <RelativeLayout
+                    android:id="@+id/relay2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="5dp">
+
+                    <android.support.design.card.MaterialCardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        card_view:cardCornerRadius="15dp"
+                        card_view:cardElevation="10dp">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivbid"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_auction_dummy" />
+                    </android.support.design.card.MaterialCardView>
+
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvShortDescription"
+
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:padding="2dp"
+                        android:layout_marginTop="2dp"
+
+                        android:drawablePadding="2dp"
+                        android:drawableLeft="@drawable/ic_place_black_24dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvMinBidTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAddress"
+                        android:layout_marginTop="2dp"
+                        android:padding="2dp"
+                        android:text="@string/Actual_Price"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/relayconuntdown"
+                        android:layout_below="@+id/tvMinBidTxt"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone"
+                         android:orientation="horizontal"
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.bidme.utils.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:text="@string/Ends_in"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center"
+                            android:id="@+id/end"
+                            android:gravity="start"
+                            android:padding="@dimen/_2sdp"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_height="wrap_content">
+
+                        </com.bidme.utils.CustomTextViewBold>
+
+
+                        <cn.iwgang.countdownview.CountdownView
+                            android:id="@+id/counter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:padding="@dimen/_2sdp"
+                            android:layout_gravity="center"
+
+
+
+
+                            app:isHideTimeBackground="true"
+                            app:isShowHour="true"
+                            app:isShowMillisecond="false"
+                            app:isShowMinute="false"
+                            app:isShowSecond="false"
+                            app:isShowDay="true"
+                            app:isTimeTextBold="true"
+                            app:suffixGravity="bottom"
+                            app:suffixTextColor="#000"
+                            app:suffixTextSize="@dimen/_8sdp"
+                            app:timeTextColor="#000"
+                            app:timeTextSize="@dimen/_10sdp"
+                            app:suffixHour="Hour"
+                            app:suffixDay="Days"
+                              />
+                        <cn.iwgang.countdownview.CountdownView
+                            android:id="@+id/counter1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/end"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/_2sdp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+
+
+
+
+                            app:isHideTimeBackground="true"
+                            app:isShowHour="true"
+                            app:isShowMillisecond="false"
+                            app:isShowMinute="true"
+                            app:isShowSecond="false"
+                            app:isShowDay="false"
+                            app:isTimeTextBold="true"
+                            app:suffixGravity="bottom"
+                            app:suffixTextColor="#000"
+                            app:suffixTextSize="@dimen/_8sdp"
+                            app:timeTextColor="#000"
+                            app:timeTextSize="@dimen/_10sdp"
+                            app:suffixHour="Hour"
+                            app:suffixMinute="Min"
+                              />
+
+
+                    </LinearLayout>
+
+
+                    <!-- <com.samyotech.getrid.utils.CustomTextView
+                         android:id="@+id/counter"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/tvMinBidTxt"
+                         android:layout_marginTop="5dp"
+                         android:layout_marginRight="10dp"
+                         android:visibility="visible"
+
+                         android:padding="3dp"
+                         android:textColor="@color/blue"
+
+                         android:textSize="12sp"
+                         android:textStyle="bold" />-->
+
+
+                    <com.bidme.utils.CustomTextViewBold
+                        android:id="@+id/tvPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAddress"
+                        android:layout_marginStart="2dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+
+                        android:layout_marginTop="2dp"
+                        android:layout_toEndOf="@+id/tvMinBidTxt"
+                        android:layout_toRightOf="@+id/tvMinBidTxt"
+                        android:text=""
+                        android:textColor="@color/text_bg"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvShortDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvProductname"
+                        android:maxLength="30"
+
+                        android:padding="2dp"
+                        android:text=""
+                        android:layout_marginTop="2dp"
+
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <com.bidme.utils.CustomTextViewBold
+                        android:id="@+id/tvProductname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="30"
+                        android:padding="2dp"
+
+                        android:text=""
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</layout>

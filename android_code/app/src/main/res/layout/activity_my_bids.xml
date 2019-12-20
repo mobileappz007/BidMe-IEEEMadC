@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@android:color/widget_edittext_dark"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/Line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/off_white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/off_white"
+                android:orientation="vertical"
+
+                >
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dummy_img_aut" />
+
+                <RelativeLayout
+                    android:id="@+id/relay2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp">
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tvProductname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Redmi Prime 3s"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvProductname"
+
+
+                        android:orientation="horizontal">
+
+                        <com.bidme.utils.CustomTextView
+                            android:id="@+id/tvLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvProductname"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:text="Bid placed by you"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <com.bidme.utils.CustomTextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvLocation"
+                            android:layout_gravity="center"
+                            android:layout_weight="6"
+                            android:text="400"
+                            android:textColor="@color/btn_bg"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        android:layout_weight="1">
+
+                        <com.bidme.utils.CustomTextView
+                            android:id="@+id/tvMinBidTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+
+
+                            android:text="Auction expires on : 25 sep"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line2">
+
+                        <android.support.v7.widget.CardView
+
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="10dp"
+                            card_view:cardCornerRadius="20dp"
+                            card_view:cardElevation="5dp">
+
+                            <com.bidme.utils.CustomButton
+                                android:layout_width="120dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/button_gmailrounded"
+
+
+                                android:text="Edit"
+                                android:textColor="@color/white" />
+
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_view2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            card_view:cardCornerRadius="20dp"
+                            card_view:cardElevation="5dp">
+
+                            <com.bidme.utils.CustomButton
+                                android:layout_width="120dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/button_gmailrounded"
+
+
+                                android:text="Delete"
+                                android:textColor="@color/white" />
+
+
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</layout>

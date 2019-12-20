@@ -1,0 +1,11 @@
+BidMe have a live location segment which will allow user to see nearby ads and auctions, which will be more frequent and easy for both buyer and seller to sell/purchase the product.
+
+Key features of the application
+- BidMe is an application which provide user a great experience to sell their old items, as well as purchase items according to their need.
+- We have designed the application keeping user experience and user interface in mind.
+- User can either directly search the items or choose the defined category to get the desired result.
+- If a user liked the item but wants to take some suggestion to family or a friend, he/she can share the product and also can add In a favorite list.
+- User can see other users bids as well, before place its own bid.
+- User can locate the seller on clicking the location under the product section.
+- This application allow user to bargain via chat.
+- A user can filter the requirements by price, distance and category wise.

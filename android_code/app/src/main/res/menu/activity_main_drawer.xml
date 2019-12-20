@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   tools:showIn="navigation view"
+    >
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_browse"
+            android:icon="@drawable/ic_home"
+            android:title="@string/nav_browse"
+
+            />
+        <item
+            android:id="@+id/nav_chats"
+            android:icon="@drawable/ic_chat"
+            android:title="@string/nav_chats" />
+        <item
+            android:id="@+id/nav_myads"
+            android:icon="@drawable/ic_ads"
+            android:title="@string/nav_myads"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_myauction"
+            android:icon="@drawable/ic_auctions"
+            android:title="@string/nav_myauction" />
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_add_alert_black_24dp"
+            android:title="@string/nav_notifications" />
+        <item
+            android:id="@+id/nav_subcription"
+            android:visible="false"
+
+            android:icon="@drawable/ic_subscription"
+            android:title="@string/nav_subscription_history" />
+
+
+        <item
+                android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings"
+                android:title="@string/nav_settings"
+            />
+        <item tools:ignore="MenuTitle">
+
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_logout"
+                    android:title="@string/nav_logout" />
+
+        </item>
+
+
+    </group>
+
+
+
+
+</menu>

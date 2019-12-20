@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- pressed -->
+    <item android:drawable="@drawable/button_red" android:state_pressed="true" />
+    <!-- focused -->
+    <item android:drawable="@drawable/button_normal_green" android:state_hovered="true" />
+    <!-- default -->
+    <item android:drawable="@drawable/button_normal_green" />
+    <item android:drawable="@drawable/ripple"></item>
+
+
+</selector>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/off_white">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:background="@color/off_white">
+
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/notification"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+           android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_disable_alarm"
+             android:layout_margin="10dp"/>
+
+        <com.bidme.utils.CustomTextViewBold
+            android:id="@+id/noNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_below="@+id/notification"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="@string/no_notification"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleview1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:visibility="visible">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</layout>

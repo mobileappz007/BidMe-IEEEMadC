@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.bidme.utils.CustomEditText
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:id="@+id/editBidPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:hint="enter your bid price"/>
+
+    <com.bidme.utils.CustomButton
+        android:id="@+id/submit"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/editBidPrice"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="submit"
+        android:background="@drawable/button_gmailrounded"/>
+
+</RelativeLayout>

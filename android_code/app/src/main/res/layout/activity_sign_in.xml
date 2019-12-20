@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        android:orientation="vertical"
+        tools:context=".activity.authentication.Sign_in">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/liner_signin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+
+<android.support.design.card.MaterialCardView
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="60dp"
+    app:cardMaxElevation="20dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardBackgroundColor="@color/bg_color"
+    app:cardCornerRadius="60dp"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <com.skydoves.medal.MedalLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:direction="right"
+        app:turn="1"
+        app:speed="3000">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/getrid_logo" />
+
+    </com.skydoves.medal.MedalLayout>
+
+
+</android.support.design.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/liner_loginwith"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.bidme.utils.CustomButton
+                        android:id="@+id/btnFacebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_facebookrounded"
+                        android:drawableLeft="@drawable/facebook"
+                        android:paddingLeft="20dp"
+                        android:text="@string/login_with_facebook"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <com.bidme.utils.CustomButton
+                        android:id="@+id/btnGmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button_gmailrounded"
+                        android:drawableLeft="@drawable/gmail_plus"
+                        android:paddingLeft="20dp"
+                        android:text="@string/login_with_google"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+
+                    <com.bidme.utils.CustomTextView
+                        android:id="@+id/tv_or"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/Or"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"
+                        android:textStyle="" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/liner_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/liner_loginwith"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.bidme.utils.CustomEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_sinuser"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/user_namee"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:text="" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.bidme.utils.CustomEditText
+                                android:id="@+id/etPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:drawableLeft="@drawable/ic_locked_new"
+                                android:drawablePadding="10dp"
+                                android:hint="@string/Password"
+                                android:inputType="textPassword"
+                                android:singleLine="true"
+                                android:text="" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/ivPass"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="15dp"
+                            android:padding="5dp"
+                            android:src="@drawable/passwordhide" />
+
+
+                    </RelativeLayout>
+
+                    <com.bidme.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <com.bidme.utils.CustomButton
+                        android:id="@+id/btnSignIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/button_selector"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="50"
+                        android:text="@string/login"
+                        android:textColor="@color/white" />
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/relacoundown"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.bidme.utils.CustomTextViewBold
+                            android:id="@+id/textPls"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/bg_color"
+                            android:text="Please try after sometime."/>
+
+     <com.bidme.utils.CustomTextView
+                            android:id="@+id/counter"
+                          android:layout_below="@+id/textPls"
+                            android:layout_width="wrap_content"
+                     android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+
+         android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorInfok"
+                          />
+
+                    </RelativeLayout>
+
+
+
+
+                   <!-- <cn.iwgang.countdownview.CountdownView
+                        android:layout_below="@+id/textPls"
+                        android:id="@+id/counter"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:visibility="visible"
+                        app:isHideTimeBackground="true"
+                        app:isShowMillisecond="false"
+                        app:isShowSecond="true"
+                        app:isTimeTextBold="true"
+                        app:suffixGravity="bottom"
+                        app:suffixTextColor="#E53935"
+                        app:suffixTextSize="10sp"
+                        app:timeTextColor="#E53935"
+                        app:timeTextSize="26sp"
+                        app:suffixSecond="Sec"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/liner_email"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <com.bidme.utils.CustomTextViewBold
+                        android:id="@+id/tvCreateAccount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/create_an_account"
+                        android:textColor="@color/text_bg"
+                        android:textSize="14sp" />
+
+                    <com.bidme.utils.CustomTextViewBold
+                        android:id="@+id/tvFrogotPass"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/Forget_password"
+                        android:textColor="@color/text_bg"
+                        android:textSize="14sp" />
+
+
+
+
+                </LinearLayout>
+                <com.bidme.utils.CustomTextViewBold
+                    android:id="@+id/guestUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/GuestUser"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/blue"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rlSnackbar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</layout>
