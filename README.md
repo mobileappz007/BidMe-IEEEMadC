@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/mobileappz007/BidMe-IEEEMadC">
-    <img src="https://github.com/mobileappz007/BidMe-IEEEMadC/blob/master/banner/banner.png" alt="BidMe" width=180 height=150>
+    <img src="https://github.com/mobileappz007/BidMe-IEEEMadC/blob/master/banner/banner.png" alt="BidMe">
   </a>
   <h3 align="center">BidMe</h3>
 </p>
