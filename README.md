@@ -32,7 +32,7 @@
 
 ### Android and iOS both app code
 
-Android app and iOS app code avialble in repo.
+Android app and iOS app code avialble in repo and different folder.
 
 
 ### About Bid Me Mobile App
