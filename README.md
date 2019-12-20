@@ -89,9 +89,9 @@ Add the various things that you are working on.
 
 - [x] Adding video call or audio call inside chat
 - [x] Adding payment gateway methods
-- [ ] Updating the App to use AndroidX
+- [x] Updating the App to use AndroidX
 - [x] Updating theme to Material design components
-- [ ] Make web dashboard more reactive
+- [x] Make web dashboard more reactive
 
 
 
@@ -100,7 +100,7 @@ Add the various things that you are working on.
 
 
 ## Versions 
-### BidMe app
+
 ### BidMe app
 * Version 2.0  DATE 20/12/2019
 * [Download BidMe app](https://github.com/mobileappz007/BidMe-IEEEMadC/blob/master/apk/bidme.apk)
