@@ -41,7 +41,7 @@ BidMe is an application which provide user a great experience to sell their old 
 ![3images](https://github.com/mobileappz007/BidMe-IEEEMadC/blob/master/banner/banner.png)
 
 ### Preview BidMe Admin Panel 
-![3images](https://github.com/mobileappz007/BidMe-IEEEMadC/blob/master/admin_screens/1.png)
+![3images](https://github.com/mobileappz007/BidMe-IEEEMadC/blob/master/admin_screens/1.jpg)
 
 ### Preview BidMe Admin Panel 
 ![3images](https://github.com/mobileappz007/BidMe-IEEEMadC/blob/master/admin_screens/2.png)
