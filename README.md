@@ -32,8 +32,7 @@
 
 ### Android and iOS both app code
 
-Android app and iOS app code avialble in repo and different folder. Please review code and verify.
-
+Android app and iOS app code avialble in repo and different folder. You can verify code.
 
 ### About Bid Me Mobile App
 
