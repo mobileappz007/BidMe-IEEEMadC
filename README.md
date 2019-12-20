@@ -30,7 +30,9 @@
 - [Versions](#)
 - [Contact Information](#)
 
+### Android and iOS both app code
 
+Android app and iOS app code avialble in repo.
 
 
 ### About Bid Me Mobile App
